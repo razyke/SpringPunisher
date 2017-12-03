@@ -1,7 +1,5 @@
 package fromBoris.screenSaver;
 
-import static org.junit.Assert.*;
-
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -12,7 +10,7 @@ public class ConfigTest {
     AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(
         Config.class);
     while (true) {
-      context.getBean(ColorFrame.class).showOnRandomPase();
+      context.getBean(AbstractColorFrame.class).showOnRandomPase();
       Thread.sleep(100);
     }
   }
