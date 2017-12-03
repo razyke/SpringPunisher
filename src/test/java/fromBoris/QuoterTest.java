@@ -2,6 +2,7 @@ package fromBoris;
 
 import static org.junit.Assert.*;
 
+import fromBoris.interfaces.Quoter;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -15,7 +16,12 @@ public class QuoterTest {
   public void before() {
     context = new ClassPathXmlApplicationContext(
         "borisExamples.xml");
+  }
 
+  @Test
+  public void testHowMuchPhases() throws Exception {
+    Quoter quoter = (Quoter) context.getBean("quoter");
+    assertEquals(2, quoter.phase());
   }
 
   @Test

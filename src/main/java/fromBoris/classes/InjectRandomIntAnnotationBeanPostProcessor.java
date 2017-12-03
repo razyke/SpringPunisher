@@ -1,5 +1,6 @@
-package fromBoris;
+package fromBoris.classes;
 
+import fromBoris.annotations.InjectRandomInt;
 import java.lang.reflect.Field;
 import java.util.Random;
 import org.springframework.beans.BeansException;
