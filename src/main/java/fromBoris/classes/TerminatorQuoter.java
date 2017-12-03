@@ -1,6 +1,7 @@
 package fromBoris.classes;
 
 import fromBoris.annotations.InjectRandomInt;
+import fromBoris.annotations.PostProxyListener;
 import fromBoris.annotations.Profiling;
 import fromBoris.interfaces.Quoter;
 import javax.annotation.PostConstruct;
@@ -14,6 +15,11 @@ public class TerminatorQuoter implements Quoter {
   private int repeat;
 
   private String message;
+
+  @PostProxyListener
+  public void stepThree() {
+    stages++;
+  }
 
   @PostConstruct
   public void init() {

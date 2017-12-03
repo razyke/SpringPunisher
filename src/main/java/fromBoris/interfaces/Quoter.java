@@ -8,4 +8,6 @@ public interface Quoter {
 
   int phase();
 
+  void stepThree();
+
 }

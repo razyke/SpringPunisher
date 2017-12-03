@@ -21,7 +21,7 @@ public class QuoterTest {
   @Test
   public void testHowMuchPhases() throws Exception {
     Quoter quoter = (Quoter) context.getBean("quoter");
-    assertEquals(2, quoter.phase());
+    assertEquals(3, quoter.phase());
   }
 
   @Test
