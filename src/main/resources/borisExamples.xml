@@ -9,6 +9,7 @@
   <bean class="fromBoris.classes.ProfilingHandlerBeanPostProcessor"/>
   <bean class="fromBoris.classes.InjectRandomIntAnnotationBeanPostProcessor"/>
   <bean class="fromBoris.classes.PostProxyInvocation"/>
+  <bean class="fromBoris.classes.DeprecationHandlerBeanFactoryPostProcessor"/>
 
   <bean id="quoter" class="fromBoris.classes.TerminatorQuoter">
     <property name="message" value="Day good, when you smile"/>

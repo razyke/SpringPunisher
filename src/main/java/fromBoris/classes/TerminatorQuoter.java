@@ -1,5 +1,6 @@
 package fromBoris.classes;
 
+import fromBoris.annotations.DeprecatedClass;
 import fromBoris.annotations.InjectRandomInt;
 import fromBoris.annotations.PostProxyListener;
 import fromBoris.annotations.Profiling;
@@ -7,6 +8,7 @@ import fromBoris.interfaces.Quoter;
 import javax.annotation.PostConstruct;
 
 @Profiling
+@DeprecatedClass(newImpl = T1000.class)
 public class TerminatorQuoter implements Quoter {
 
   private int stages;

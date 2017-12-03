@@ -2,6 +2,7 @@ package fromBoris;
 
 import static org.junit.Assert.*;
 
+import fromBoris.classes.T1000;
 import fromBoris.interfaces.Quoter;
 import org.junit.After;
 import org.junit.Before;
@@ -27,7 +28,11 @@ public class QuoterTest {
   @Test
   public void sayQuote() throws Exception {
     Quoter quoter = (Quoter) context.getBean("quoter");
-    assertEquals("Day good, when you smile", quoter.sayQuote());
+    if (!(quoter instanceof T1000)) {
+      assertEquals("Day good, when you smile", quoter.sayQuote());
+    } else {
+      assertEquals("New day, new life", quoter.sayQuote());
+    }
   }
 
   @Test
