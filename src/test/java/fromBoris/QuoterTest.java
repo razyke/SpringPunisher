@@ -5,7 +5,6 @@ import static org.junit.Assert.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class QuoterTest {
@@ -25,9 +24,21 @@ public class QuoterTest {
     assertEquals("Day good, when you smile", quoter.sayQuote());
   }
 
+  @Test
+  public void SayQuoteOnRandomRepeat() throws Exception {
+    Quoter quoter = (Quoter) context.getBean("quoter");
+    int random = quoter.repeat();
+
+    if (random < 2 || random > 9) {
+      assertFalse(true);
+    } else {
+      assertTrue(true);
+    }
+  }
+
   @After
   public void end() {
-   ((ConfigurableApplicationContext) context).close();
+   context.close();
   }
 
 }
