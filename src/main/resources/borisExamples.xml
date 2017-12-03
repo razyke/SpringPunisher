@@ -6,6 +6,7 @@
 
   <context:annotation-config/>
 
+  <bean class="fromBoris.classes.ProfilingHandlerBeanPostProcessor"/>
   <bean class="fromBoris.classes.InjectRandomIntAnnotationBeanPostProcessor"/>
   <bean id="quoter" class="fromBoris.classes.TerminatorQuoter">
     <property name="message" value="Day good, when you smile"/>
