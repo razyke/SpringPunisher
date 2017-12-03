@@ -2,6 +2,7 @@ package fromBoris;
 
 import static org.junit.Assert.*;
 
+import fromBoris.classes.PropertyFileApplicationContext;
 import fromBoris.classes.T1000;
 import fromBoris.interfaces.Quoter;
 import org.junit.After;
@@ -45,6 +46,15 @@ public class QuoterTest {
     } else {
       assertTrue(true);
     }
+  }
+
+  @Test
+  public void TestFromProperties() throws Exception {
+    PropertyFileApplicationContext context = new PropertyFileApplicationContext(
+        "borisExample.properties");
+    String s = context.getBean(Quoter.class).sayQuote();
+    assertEquals("Jasen come back here", s);
+
   }
 
   @After
